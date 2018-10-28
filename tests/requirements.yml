@@ -1,1 +1,2 @@
-- jumperfly.docker
+- src: jumperfly.docker
+  version: v0.1.0

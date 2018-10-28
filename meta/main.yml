@@ -1,9 +1,8 @@
 dependencies:
-  - {
-      role: jumperfly.docker,
-      docker_version: "{{ kube_docker_version }}",
-      docker_daemon_json_data: "{{ kube_docker_daemon_json_data }}"
-    }
+  - src: jumperfly.docker
+    version: v0.1.0
+    docker_version: "{{ kube_docker_version }}"
+    docker_daemon_json_data: "{{ kube_docker_daemon_json_data }}"
 
 galaxy_info:
   role_name: kubelet
