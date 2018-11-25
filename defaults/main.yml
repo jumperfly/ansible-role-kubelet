@@ -1,5 +1,4 @@
 # Docker configuration - overrides for docker role
-kube_docker_version: 18.06.*
 kube_docker_daemon_json_data: |
   {
     "iptables": false,
