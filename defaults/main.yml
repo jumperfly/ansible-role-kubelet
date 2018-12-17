@@ -7,7 +7,7 @@ kube_docker_daemon_json_data: |
   }
 
 # General Kubernetes configuration
-kube_version: 1.12.1
+kube_version: 1.13.1
 kube_yum_repo_url: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
 kube_yum_repo_gpg: https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 kube_yum_repo_repo_gpgcheck: yes
