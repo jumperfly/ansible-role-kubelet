@@ -2,10 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "jumperfly/centos-7-ansible"
-  config.vm.box_version = "1804.02.01"
+  config.vm.box = "jumperfly/ansible-2.8"
+  config.vm.box_version = "0.3"
   config.vm.box_check_update = false
-  config.vm.provision "shell", run: "always", inline: "swapoff -a"
   config.ssh.insert_key = false
 
   config.vm.provider "virtualbox" do |v|
@@ -15,7 +14,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     mkdir -p /etc/ansible/roles
-    ln -snf /vagrant/ /etc/ansible/roles/jumperfly.kubeblet
+    ln -snf /vagrant/ /etc/ansible/roles/jumperfly.kubelet
     ansible-galaxy install --ignore-errors -r /vagrant/tests/requirements.yml -p /etc/ansible/roles
   SHELL
 
