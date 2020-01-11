@@ -1,6 +1,6 @@
 dependencies:
   - src: jumperfly.docker
-    version: v0.1.0
+    version: v0.2.0
     docker_daemon_json_data: "{{ kube_docker_daemon_json_data }}"
 
 galaxy_info:
